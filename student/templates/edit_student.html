@@ -1,0 +1,15 @@
+{% extends 'base_templates.html' %}
+{% block page_title %}
+Edit Student
+{% endblock page_title %}
+{% block main_content %}
+{% load static %}
+<section class="content">
+    <div class="container-fluid">
+      {% url 'edit-student-save' as action_path %}
+      
+      {%include 'form.html' with messages=messages form=form action_path=action_path button_text='Edit Student'%}
+
+    </div>
+  </section>
+{% endblock main_content %}
